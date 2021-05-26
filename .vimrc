@@ -1,5 +1,9 @@
 set number
 
+set showcmd
+
+set history=1000
+
 set hlsearch incsearch
 
 set colorcolumn=80
@@ -34,3 +38,12 @@ noremap <Right> <Nop>
 " Find next + center
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
+
+" Open fzf :GFiles
+noremap <C-p> :GFiles<Cr>
+
+" Open fzf Silver Searcher
+noremap <C-g> :Ag<Cr>
+
+" Open fzf :Buffers
+noremap <silent><leader>l :Buffers<Cr>
