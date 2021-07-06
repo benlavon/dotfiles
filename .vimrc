@@ -1,5 +1,3 @@
-set number
-
 set showcmd
 
 set history=1000
@@ -7,6 +5,13 @@ set history=1000
 set hlsearch incsearch
 
 set colorcolumn=80
+
+:set number relativenumber
+
+" Indentation
+set expandtab
+set shiftwidth=2
+set tabstop=2
 
 " Theme
 syntax enable
@@ -22,6 +27,15 @@ Plug 'tpope/vim-sensible'
 
 " Fancy stuff for Rails
 Plug 'tpope/vim-rails'
+
+" Fancy commenting, e.g. `gc` and `gcc` to comment out targets and lines
+Plug 'tpope/vim-commentary'
+
+" Fancy stuff for JavaScript
+Plug 'pangloss/vim-javascript'
+
+" Surround stuff with stuff
+Plug 'tpope/vim-surround'
 
 " Make sure Silver Searcher is installed to use :Ag
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -47,3 +61,7 @@ noremap <C-g> :Ag<Cr>
 
 " Open fzf :Buffers
 noremap <silent><leader>l :Buffers<Cr>
+
+" Automatically trim whitespace from the following files
+autocmd BufWritePre * :%s/\s\+$//e
+
