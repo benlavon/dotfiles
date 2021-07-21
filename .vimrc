@@ -37,6 +37,9 @@ Plug 'pangloss/vim-javascript'
 " Surround stuff with stuff
 Plug 'tpope/vim-surround'
 
+" Run any git commands
+Plug 'tpope/vim-fugitive'
+
 " Make sure Silver Searcher is installed to use :Ag
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
