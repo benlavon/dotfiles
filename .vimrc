@@ -1,10 +1,11 @@
 set showcmd
 
-set history=1000
+set history=10000
 
 set hlsearch incsearch
 
 set colorcolumn=80
+set textwidth=79
 
 :set number relativenumber
 
@@ -68,3 +69,5 @@ noremap <silent><leader>l :Buffers<Cr>
 " Automatically trim whitespace from the following files
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Reselect pasted text
+nnoremap gp `[v`]
